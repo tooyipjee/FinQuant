@@ -89,7 +89,7 @@ print(pf.data.head(3))
 
 # building a portfolio by providing stock data
 # and a desired allocation
-pf2 = build_portfolio(data=df_data, pf_allocation=df_pf)
+pf2 = build_portfolio(pf_allocation=df_pf,data_api="yfinance")
 
 # <codecell>
 
