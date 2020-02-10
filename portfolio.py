@@ -6,6 +6,7 @@ import pandas as pd
 import datetime
 # importing some custom functions/objects
 from finquant.portfolio import build_portfolio
+import numpy as np
 years=5
 
 pf_allocation = pd.read_csv('portfolio.csv')
