@@ -260,3 +260,14 @@ Also, the optimisation of a portfolio and its visualisation based on a *Monte Ca
 
 Finally, *FinQuant*'s visualisation methods allow for overlays, if this is desired. Thus, with only the following few lines of code, one can create an overlay of the *Monte Carlo* run, the *Efficient Frontier*, its optimised portfolios for *Minimum Volatility* and *Maximum Sharpe Ratio*, as well as the portfolio's individual stocks.
 
+
+
+TO INSTALL
+
+1. Install tensorflow using conda
+2. Install pandas 0.24 using pip install pandas==0.24
+3. Install seaborn
+4. Install matplotlib
+5. pip install finquant
+6. pip install pytest
+7. pip install scipy
