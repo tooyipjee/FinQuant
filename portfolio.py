@@ -8,10 +8,10 @@ import datetime
 from finquant.portfolio import build_portfolio
 import numpy as np
 years=5
-
 pf_allocation = pd.read_csv('portfolio.csv')
 names = pf_allocation["Name"].values.tolist()
-start_date = datetime.datetime.now() - datetime.timedelta(days=years*365)
+today = datetime.datetime.now()
+start_date = today - datetime.timedelta(days=years*365)
 pf = build_portfolio(
     names=names, pf_allocation=pf_allocation, start_date=start_date, data_api="yfinance")
 
@@ -24,7 +24,7 @@ stockList = list()
 for i in pf.stocks.keys():
     stockList.append(i)
     
-from finquant.moving_average import compute_ma, ema
+from finquant.moving_average import compute_ma, ema, plot_bollinger_band,sma
 for j in range(0,len(stockList)):
     dis = pf.get_stock(stockList[j]).data.copy(deep=True)
     spans = [7, 30, 180]
