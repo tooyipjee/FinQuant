@@ -9,7 +9,7 @@ from finquant.portfolio import build_portfolio
 import numpy as np
 epochs = 10
 years= 1
-pf_allocation = pd.read_csv('portfolio.csv')
+pf_allocation = pd.read_csv('../portfolio/portfolio.csv')
 names = pf_allocation["Name"].values.tolist()
 today = datetime.datetime.now()
 start_date = today - datetime.timedelta(days=years*365)
