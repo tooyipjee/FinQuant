@@ -6,7 +6,7 @@ from finquant.portfolio import build_portfolio
 import datetime
 sns.set()
 years=1
-pf_allocation = pd.read_csv('../portfolio/portfolio.csv')
+pf_allocation = pd.read_csv('../portfolio/snp500_10-2.csv')
 names = pf_allocation["Name"].values.tolist()
 today = datetime.datetime.now()
 start_date = today - datetime.timedelta(days=years*365)

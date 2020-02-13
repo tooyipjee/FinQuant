@@ -7,11 +7,11 @@ import datetime
 # importing some custom functions/objects
 from finquant.portfolio import build_portfolio
 import numpy as np
-years=5
-pf_allocation = pd.read_csv('../portfolio/portfolio.csv')
+years=3
+pf_allocation = pd.read_csv('../portfolio/UKpf.csv')
 names = pf_allocation["Name"].values.tolist()
 today = datetime.datetime.now()
-start_date = today - datetime.timedelta(days=years*365)
+start_date = today - datetime.timedelta(days=int(years*365))
 pf = build_portfolio(
     names=names, pf_allocation=pf_allocation, start_date=start_date, data_api="yfinance")
 
@@ -35,6 +35,7 @@ for j in range(0,len(stockList)):
     
 # Monte Carlo optimisation
 opt_w, opt_res = pf.mc_optimisation(num_trials=500)
+pf.mc_properties()
 #Uncomment the code below to visualise EF (ER vs Volatility)
 """
 pf.mc_plot_results()
