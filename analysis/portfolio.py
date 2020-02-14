@@ -34,7 +34,7 @@ for j in range(0,len(stockList)):
     #print(ma.tail())
     
 # Monte Carlo optimisation
-opt_w, opt_res = pf.mc_optimisation(num_trials=500)
+opt_w, opt_res = pf.mc_optimisation(num_trials=1000)
 pf.mc_properties()
 #Uncomment the code below to visualise EF (ER vs Volatility)
 """
