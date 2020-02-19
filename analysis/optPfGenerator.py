@@ -25,10 +25,10 @@ opt_w_T=pd.DataFrame.sort_values(opt_w_T, 'Max Sharpe Ratio',ascending=False)
 
 opt_pf_allocation=pd.DataFrame(np.zeros((no_of_stocks, 2))).astype(str)
 for i in range(0,no_of_stocks):
-    opt_pf_allocation.set_value(i, 0,opt_w_T.index[i])
-    opt_pf_allocation.set_value(i, 1,opt_w_T.iloc[i,1])
+    opt_pf_allocation.iat[i, 0]=opt_w_T.index[i]
+    opt_pf_allocation.iat[i, 1]=opt_w_T.iloc[i,1]
 opt_pf_allocation.columns = ['Name','Allocation']
-opt_names = pf_allocation["Name"].values.tolist()
+opt_names = opt_pf_allocation["Name"].values.tolist()
 opt_pf = build_portfolio(
     names=opt_names, pf_allocation=opt_pf_allocation, start_date=start_date, data_api="yfinance")
 opt_pf_allocation.to_csv('../portfolio/optimal_'+portfolio_name+'.csv',index=False)
