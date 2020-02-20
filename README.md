@@ -267,3 +267,5 @@ TO INSTALL
 1. pip install FinQuant
 2. conda install spyder
 3. pip install pandas==0.24
+4. conda install -c conda-forge tensorflow
+5. pip install seaborn
