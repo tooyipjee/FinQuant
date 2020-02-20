@@ -264,10 +264,6 @@ Finally, *FinQuant*'s visualisation methods allow for overlays, if this is desir
 
 TO INSTALL
 
-1. Install tensorflow using conda
-2. Install pandas 0.24 using pip install pandas==0.24
-3. Install seaborn
-4. Install matplotlib
-5. pip install finquant
-6. pip install pytest
-7. pip install scipy
+1. pip install FinQuant
+2. conda install spyder
+3. pip install pandas==0.24
